@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.OrderManageDao">
+	
+
+   
+	<select id="findAllOrder"  resultMap="orderMap">
+		select * from myorder
+		
+	</select>
+    
+	<select id="findOrderBySearchKey" parameterType="String" resultMap="orderMap">
+		select * from myorder where orderId like concat('%',#{searchKey},'%') or cId like concat('%',#{searchKey},'%')
+		
+	</select>
+	
+	<select id="findOrderById" parameterType="String" resultMap="orderMap">
+		select * from myorder where orderId=#{orderId}
+		
+	</select>
+	<select id="findOrderByCid" parameterType="int" resultMap="orderMap">
+		select * from myorder where cid=#{cid}
+		
+	</select>
+	<resultMap id="orderMap" type="Myorder">		
+		<id property="orderId" column="orderId" /><!--明确主键列-->
+		
+			<result property="payDate" column="payDate" />
+	 		<result property="dueDate" column="dueDate" />
+	 		<result property="operator" column="operator" />
+		<association javaType="Client" property="client" column="cid" 
+			select ="getClient"/>
+		<association javaType="Client" property="client" column="cType" 
+			select ="getClient"/>
+        
+		
+	</resultMap>
+	
+	<select id="getClient" parameterType="int" resultType="Client">
+		select * from client where cid=#{cid}
+	</select>
+</mapper>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#rlTable{
+	position: absolute;
+	
+	width:350px;
+	height:300px;
+	left:400px;
+	
+	top:180px;
+	overflow:auto;
+	
+}
+#userInput{
+	width:250px;
+	height: 32px;
+}
+#pwdInput{
+	width:250px;
+	height: 32px;
+}
+#btnrl{
+	width:100%;
+	height:32px;
+	 border-radius: 4px;
+        background-color: #e4393c;
+        font-size: 20px;
+        color: #fef8f8;
+        border:none;
+        bottom: 30px;
+        cursor: pointer;
+
+}
+#bgPic{
+ position:absolute;
+top:60px;
+left:800px; 
+ width:100%;
+height:100%; 
+background: url("/CRMS/image/bg.gif") no-repeat;
+background-size:600px;
+overflow:hidden;
+
+opacity:0.9;
+z-index:-1;
+
+}

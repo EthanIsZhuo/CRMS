@@ -1,0 +1,92 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+ul{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+#manageMenu{
+	position:relative;
+	top:80px;
+	width:300px;
+	height:100%;
+	
+  	background:#383d50;
+  	
+  	color:#fff;
+  	
+	
+}
+#Ltitle{
+	font-size:22px;
+}
+#manageHead{
+		position: relative;
+		top:60px;
+		height:200px;
+		width:100%;
+		text-align:center;
+		/* border:1px solid red; */
+}
+#manageHead a{
+	color:#fff;
+	text-decoration: none;
+}
+
+#mList{
+	position: relative;
+	
+	height:300px;
+	
+	 
+	 text-align: center;
+}
+#mList li{
+	position: relative;
+	height:80px;
+	width:100%;
+	line-height: 80px;
+	text-align: center;
+/* 	border:1px solid red; */
+	background-color:#525a6f;
+	
+	
+}
+#mList li a{
+	font-size:22px;
+	font-weight:bold;
+	color:#fff;
+	text-decoration: none;
+}
+#mList li:hover{
+	background-color:#009788;
+	
+}
+#headPic1{
+	position:relative;
+	width:60px;
+	height:60px;
+	margin:-30px;
+	left:50%;
+	border-radius: 50%;
+	background: url("/CRMS/image/normal.jpeg") no-repeat ;
+  background-size:cover ;
+	background-position:50% ;
+}
+#headPic2{
+	position:relative;
+	width:60px;
+	height:60px;
+	margin:-30px;
+	left:50%;
+	border-radius: 50%;
+	background: url("/CRMS/image/manager.jpeg") no-repeat ;
+  background-size:cover ;
+	background-position:50% ;
+}
