@@ -1,4 +1,4 @@
-# CRMS
+# CRMS-客户关系管理系统
 校园网宽带管理系统（vue+axios+jsp+mysql+ssm框架）		
 
 开发环境：Eclipse
